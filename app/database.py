@@ -7,11 +7,11 @@ from pymongo import MongoClient
 
 load_dotenv()
 
-# SQL
+# SQL database connection
 SQL_DATABASE_URL = os.getenv("SQL_DATABASE_URL")
 sql_engine = create_engine(SQL_DATABASE_URL)
 
-# Mongo
+# MongoDB connection
 MONGO_URI = os.getenv("MONGO_URI")
 mongo_client = MongoClient(MONGO_URI)
 mongo_db = mongo_client.get_default_database()
